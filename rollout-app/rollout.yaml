@@ -15,12 +15,12 @@ spec:
     spec:
       containers:
       - name: rollout-demo
-        image: nginx:1.22.0
+        image: nginx:1.23.0
         ports:
         - containerPort: 80
   strategy:
     canary:
       steps:
       - setWeight: 30
-      - pause: { duration: 15s }
+      - pause: {}
       - setWeight: 100
