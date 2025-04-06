@@ -1,5 +1,10 @@
 # Progressive Deployment with Argo Rollouts
 
+## Prerequisites
+
+- Argo CD and kubectl installed
+- `kubectl-argo-rollouts.exe` CLI tool downloaded
+
 ## Steps Performed
 
 ```bash
@@ -9,6 +14,14 @@ kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/rele
 
 # Port-forward the dashboard
 kubectl -n argo-rollouts port-forward deployment/argo-rollouts-dashboard 3100:3100
+Note: Port-forwarding the Rollouts Dashboard (3100:3100) failed during the demo, so I used the CLI dashboard alternative.
+
+# Change to Downloads folder (assuming the CLI is there)
+cd ~
+cd downloads
+
+# Open the Argo Rollouts dashboard
+.\kubectl-argo-rollouts.exe dashboard
 
 # Create rollout app in Argo CD
 argocd app create rollout-app --repo https://github.com/SujanMaharjan6/argocd-gitops-sujan.git --path rollout-app --dest-server https://kubernetes.default.svc --dest-namespace default --directory-recurse
