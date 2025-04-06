@@ -19,6 +19,12 @@ while ($true) {
 
 while ($true) {
   Get-Date
+  argocd app get guestbook-app
+  Start-Sleep -Seconds 5
+}
+
+while ($true) {
+  Get-Date
   kubectl get deploy guestbook-ui
   Start-Sleep -Seconds 10
 }
