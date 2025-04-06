@@ -1,6 +1,6 @@
 # Cluster Management via Argo CD
 
-## 🧪 Steps Performed
+## Steps Performed
 
 ```bash
 # Start minikube
