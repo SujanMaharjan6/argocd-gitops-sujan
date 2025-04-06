@@ -2,7 +2,10 @@
 
 ## Prerequisites
 
-- Argo CD and kubectl installed
+- Minikube cluster is up and running (`minikube start`)
+- Argo CD is installed and running in the `argocd` namespace
+- Argo CD server is accessible via port-forwarding
+- Logged in to Argo CD CLI (credentials and login were completed during the Cluster Management setup)
 - `kubectl-argo-rollouts.exe` CLI tool downloaded
 
 ## Steps Performed
