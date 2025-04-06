@@ -33,6 +33,10 @@ argocd app create rollout-app --repo https://github.com/SujanMaharjan6/argocd-gi
 argocd app sync rollout-app
 argocd app set rollout-app --sync-policy automated --auto-prune --self-heal
 
+# Delete the rollout app from Argo CD
+argocd app delete rollout-app --cascade
+Note: The rollout app was deleted in order to recreate it later using the Argo CD GUI for demonstration purposes.
+
 # Rollout CLI actions
 ./kubectl-argo-rollouts.exe get rollout rollout-demo --watch
 ./kubectl-argo-rollouts.exe promote rollout-demo --namespace default --full
