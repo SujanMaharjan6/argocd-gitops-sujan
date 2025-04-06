@@ -4,13 +4,7 @@
 
 ```bash
 # Create the guestbook application
-argocd app create guestbook-app \
-  --repo https://github.com/SujanMaharjan6/argocd-gitops-sujan.git \
-  --path guestbook-app \
-  --dest-server https://kubernetes.default.svc \
-  --dest-namespace default \
-  --directory-recurse \
-  --revision main
+argocd app create guestbook-app --repo https://github.com/SujanMaharjan6/argocd-gitops-sujan.git --path guestbook-app --dest-server https://kubernetes.default.svc --dest-namespace default --directory-recurse --revision main
 
 # Sync and automate
 argocd app sync guestbook-app
