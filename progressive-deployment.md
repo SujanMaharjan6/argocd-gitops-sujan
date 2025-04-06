@@ -11,12 +11,7 @@ kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/rele
 kubectl -n argo-rollouts port-forward deployment/argo-rollouts-dashboard 3100:3100
 
 # Create rollout app in Argo CD
-argocd app create rollout-app \
-  --repo https://github.com/SujanMaharjan6/argocd-gitops-sujan.git \
-  --path rollout-app \
-  --dest-server https://kubernetes.default.svc \
-  --dest-namespace default \
-  --directory-recurse
+argocd app create rollout-app --repo https://github.com/SujanMaharjan6/argocd-gitops-sujan.git --path rollout-app --dest-server https://kubernetes.default.svc --dest-namespace default --directory-recurse
 
 # Sync and automate
 argocd app sync rollout-app
