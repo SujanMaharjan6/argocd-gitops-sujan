@@ -8,7 +8,6 @@ This repository contains my demo and documentation for the Argo Project Presenta
 
 ## Files
 
-- `Argo_Project_Presentation.pptx` – 10-slide presentation on Argo CD, Rollouts, Workflows, and Events
 - `cluster-management.md` – Steps and commands used to manage cluster state via Argo CD
 - `app-management.md` – Git sync, health check, and auto-heal demonstration
 - `progressive-deployment.md` – Canary via Argo Rollouts
